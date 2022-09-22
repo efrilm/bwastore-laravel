@@ -25,19 +25,26 @@
                     <img src="/images/admin.png" alt="" class="my-4" />
                 </div>
                 <div class="list-group list-group-flush">
-                    <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action active">
+                    <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action">
                         Dashboard
                     </a>
-                    <a href="/dashboard-products.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('product.index') }}"
+                        class="list-group-item list-group-item-action {{ request()->is('admin/product') ? 'active' : '' }}">
                         Products
                     </a>
-                    <a href="/dashboard-products.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('product-gallery.index') }}"
+                        class="list-group-item list-group-item-action {{ request()->is('admin/product-gallery*') ? 'active' : '' }}">
+                        Galleries
+                    </a>
+                    <a href="{{ route('category.index') }}"
+                        class="list-group-item list-group-item-action {{ request()->is('admin/category*') ? 'active' : '' }}">
                         Categories
                     </a>
                     <a href="/dashboard-products.html" class="list-group-item list-group-item-action">
                         Transactions
                     </a>
-                    <a href="/dashboard-products.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('user.index') }}"
+                        class="list-group-item list-group-item-action {{ request()->is('admin/user*') ? 'active' : '' }}">
                         Users
                     </a>
                     <a href="/index.html" class="list-group-item list-group-item-action">
