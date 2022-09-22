@@ -42,7 +42,7 @@
                     <div class="col-12 mt-2">
                         <h5 class="mb-3">Recent Transaction</h5>
                         @foreach ($transaction_data as $transaction)
-                            <a href="{{ route('dashboard-transaction-detail', $transaction->id) }}"
+                            <a href="{{ route('dashboard-transaction-details', $transaction->id) }}"
                                 class="card card-list d-block">
                                 <div class="card-body">
                                     <div class="row">
